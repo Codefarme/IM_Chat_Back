@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.codefarme.imchat.mapper.UserBrowseMapper">
+    <resultMap id="BaseResultMap" type="com.codefarme.imchat.pojo.UserBrowse">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="account" property="account" jdbcType="VARCHAR"/>
+        <result column="browse_account" property="browseAccount" jdbcType="VARCHAR"/>
+        <result column="browse_time" property="browseTime" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, account, browse_account, browse_time
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from user_browse
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from user_browse
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.codefarme.imchat.pojo.UserBrowse">
+    insert into user_browse (id, account, browse_account, 
+      browse_time)
+    values (#{id,jdbcType=INTEGER}, #{account,jdbcType=VARCHAR}, #{browseAccount,jdbcType=VARCHAR}, 
+      #{browseTime,jdbcType=VARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.codefarme.imchat.pojo.UserBrowse">
+        insert into user_browse
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="account != null">
+                account,
+            </if>
+            <if test="browseAccount != null">
+                browse_account,
+            </if>
+            <if test="browseTime != null">
+                browse_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="account != null">
+                #{account,jdbcType=VARCHAR},
+            </if>
+            <if test="browseAccount != null">
+                #{browseAccount,jdbcType=VARCHAR},
+            </if>
+            <if test="browseTime != null">
+                #{browseTime,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.codefarme.imchat.pojo.UserBrowse">
+        update user_browse
+        <set>
+            <if test="account != null">
+                account = #{account,jdbcType=VARCHAR},
+            </if>
+            <if test="browseAccount != null">
+                browse_account = #{browseAccount,jdbcType=VARCHAR},
+            </if>
+            <if test="browseTime != null">
+                browse_time = #{browseTime,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.codefarme.imchat.pojo.UserBrowse">
+    update user_browse
+    set account = #{account,jdbcType=VARCHAR},
+      browse_account = #{browseAccount,jdbcType=VARCHAR},
+      browse_time = #{browseTime,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+    <!--==========================================================================-->
+    <select id="selectByAccount" resultType="com.codefarme.imchat.pojo.UserBrowse" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from user_browse
+        where account = #{account,jdbcType=VARCHAR}
+
+        ORDER BY
+        browse_time desc
+    </select>
+    <select id="selectByBrowseAccount" resultType="com.codefarme.imchat.pojo.UserBrowse" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from user_browse
+        where browse_account = #{account,jdbcType=VARCHAR}
+
+        ORDER BY
+        browse_time desc
+    </select>
+
+    <select id="selectByAccountAndBrowseAccount" resultType="com.codefarme.imchat.pojo.UserBrowse" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from user_browse
+        where
+          browse_account = #{browAccount,jdbcType=VARCHAR}
+
+        AND
+          account = #{myAccount,jdbcType=VARCHAR}
+    </select>
+</mapper>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.codefarme.imchat.mapper.DynamicPraiseMapper">
+    <resultMap id="BaseResultMap" type="com.codefarme.imchat.pojo.DynamicPraise">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="cid" property="cid" jdbcType="INTEGER"/>
+        <result column="account" property="account" jdbcType="VARCHAR"/>
+        <result column="dynamic_account" property="dynamicAccount" jdbcType="VARCHAR"/>
+        <result column="add_time" property="addTime" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, cid, account, dynamic_account, add_time
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from dynamic_praise
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from dynamic_praise
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.codefarme.imchat.pojo.DynamicPraise">
+    insert into dynamic_praise (id, cid, account, 
+      dynamic_account, add_time)
+    values (#{id,jdbcType=INTEGER}, #{cid,jdbcType=INTEGER}, #{account,jdbcType=VARCHAR}, 
+      #{dynamicAccount,jdbcType=VARCHAR}, #{addTime,jdbcType=VARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.codefarme.imchat.pojo.DynamicPraise">
+        insert into dynamic_praise
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="cid != null">
+                cid,
+            </if>
+            <if test="account != null">
+                account,
+            </if>
+            <if test="dynamicAccount != null">
+                dynamic_account,
+            </if>
+            <if test="addTime != null">
+                add_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="cid != null">
+                #{cid,jdbcType=INTEGER},
+            </if>
+            <if test="account != null">
+                #{account,jdbcType=VARCHAR},
+            </if>
+            <if test="dynamicAccount != null">
+                #{dynamicAccount,jdbcType=VARCHAR},
+            </if>
+            <if test="addTime != null">
+                #{addTime,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.codefarme.imchat.pojo.DynamicPraise">
+        update dynamic_praise
+        <set>
+            <if test="cid != null">
+                cid = #{cid,jdbcType=INTEGER},
+            </if>
+            <if test="account != null">
+                account = #{account,jdbcType=VARCHAR},
+            </if>
+            <if test="dynamicAccount != null">
+                dynamic_account = #{dynamicAccount,jdbcType=VARCHAR},
+            </if>
+            <if test="addTime != null">
+                add_time = #{addTime,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.codefarme.imchat.pojo.DynamicPraise">
+    update dynamic_praise
+    set cid = #{cid,jdbcType=INTEGER},
+      account = #{account,jdbcType=VARCHAR},
+      dynamic_account = #{dynamicAccount,jdbcType=VARCHAR},
+      add_time = #{addTime,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+    <!--====================================================================================================-->
+    <select id="getDynamicLikeCount" resultType="java.lang.Integer">
+		SELECT
+			COUNT(id)
+		FROM
+			dynamic_praise
+		WHERE
+			cid=#{cid}
+	</select>
+
+
+    <select id="getDynamicLike" resultType="com.codefarme.imchat.pojo.DynamicPraise">
+		SELECT
+			*
+		FROM
+			dynamic_praise
+		WHERE
+			cid=#{id}
+		ORDER BY
+			add_time desc
+	</select>
+    <!--当前用户点赞其他人的记录-->
+    <select id="selectByAccount" resultType="com.codefarme.imchat.pojo.DynamicPraise">
+		SELECT
+			*
+		FROM
+			dynamic_praise
+		WHERE
+			account = #{account,jdbcType=VARCHAR}
+		ORDER BY
+			add_time desc
+	</select>
+    <!--其他用户点赞自己的记录-->
+    <select id="selectByDynamicAccount" resultType="com.codefarme.imchat.pojo.DynamicPraise">
+		SELECT
+			*
+		FROM
+			dynamic_praise
+		WHERE
+			dynamic_account = #{account,jdbcType=VARCHAR}
+		ORDER BY
+			add_time desc
+	</select>
+</mapper>

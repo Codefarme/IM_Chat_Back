@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.codefarme.imchat.mapper.DynamicCommentReplyMapper">
+    <resultMap id="BaseResultMap" type="com.codefarme.imchat.pojo.DynamicCommentReply">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="dyna_id" property="dynaId" jdbcType="INTEGER"/>
+        <result column="cid" property="cid" jdbcType="INTEGER"/>
+        <result column="account" property="account" jdbcType="VARCHAR"/>
+        <result column="comment_account" property="commentAccount" jdbcType="VARCHAR"/>
+        <result column="reply_type" property="replyType" jdbcType="VARCHAR"/>
+        <result column="reply_content" property="replyContent" jdbcType="VARCHAR"/>
+        <result column="add_time" property="addTime" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="INTEGER"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, dyna_id, cid, account, comment_account, reply_type, reply_content, add_time, 
+    status
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from dynamic_comment_reply
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from dynamic_comment_reply
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.codefarme.imchat.pojo.DynamicCommentReply">
+    insert into dynamic_comment_reply (id, dyna_id, cid, 
+      account, comment_account, reply_type, 
+      reply_content, add_time, status
+      )
+    values (#{id,jdbcType=INTEGER}, #{dynaId,jdbcType=INTEGER}, #{cid,jdbcType=INTEGER}, 
+      #{account,jdbcType=VARCHAR}, #{commentAccount,jdbcType=VARCHAR}, #{replyType,jdbcType=VARCHAR}, 
+      #{replyContent,jdbcType=VARCHAR}, #{addTime,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}
+      )
+  </insert>
+    <insert id="insertSelective" parameterType="com.codefarme.imchat.pojo.DynamicCommentReply">
+        insert into dynamic_comment_reply
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="dynaId != null">
+                dyna_id,
+            </if>
+            <if test="cid != null">
+                cid,
+            </if>
+            <if test="account != null">
+                account,
+            </if>
+            <if test="commentAccount != null">
+                comment_account,
+            </if>
+            <if test="replyType != null">
+                reply_type,
+            </if>
+            <if test="replyContent != null">
+                reply_content,
+            </if>
+            <if test="addTime != null">
+                add_time,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="dynaId != null">
+                #{dynaId,jdbcType=INTEGER},
+            </if>
+            <if test="cid != null">
+                #{cid,jdbcType=INTEGER},
+            </if>
+            <if test="account != null">
+                #{account,jdbcType=VARCHAR},
+            </if>
+            <if test="commentAccount != null">
+                #{commentAccount,jdbcType=VARCHAR},
+            </if>
+            <if test="replyType != null">
+                #{replyType,jdbcType=VARCHAR},
+            </if>
+            <if test="replyContent != null">
+                #{replyContent,jdbcType=VARCHAR},
+            </if>
+            <if test="addTime != null">
+                #{addTime,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.codefarme.imchat.pojo.DynamicCommentReply">
+        update dynamic_comment_reply
+        <set>
+            <if test="dynaId != null">
+                dyna_id = #{dynaId,jdbcType=INTEGER},
+            </if>
+            <if test="cid != null">
+                cid = #{cid,jdbcType=INTEGER},
+            </if>
+            <if test="account != null">
+                account = #{account,jdbcType=VARCHAR},
+            </if>
+            <if test="commentAccount != null">
+                comment_account = #{commentAccount,jdbcType=VARCHAR},
+            </if>
+            <if test="replyType != null">
+                reply_type = #{replyType,jdbcType=VARCHAR},
+            </if>
+            <if test="replyContent != null">
+                reply_content = #{replyContent,jdbcType=VARCHAR},
+            </if>
+            <if test="addTime != null">
+                add_time = #{addTime,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=INTEGER},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.codefarme.imchat.pojo.DynamicCommentReply">
+    update dynamic_comment_reply
+    set dyna_id = #{dynaId,jdbcType=INTEGER},
+      cid = #{cid,jdbcType=INTEGER},
+      account = #{account,jdbcType=VARCHAR},
+      comment_account = #{commentAccount,jdbcType=VARCHAR},
+      reply_type = #{replyType,jdbcType=VARCHAR},
+      reply_content = #{replyContent,jdbcType=VARCHAR},
+      add_time = #{addTime,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+    <!--============================================================================================-->
+    <select id="getReplyBycidAndLimit" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        dynamic_comment_reply
+        where
+        cid=#{cid}
+
+        ORDER BY
+        add_time desc
+
+
+        limit 3
+    </select>
+    <select id="getReplyBycid" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        dynamic_comment_reply
+        where
+        cid=#{cid}
+
+        ORDER BY
+        add_time desc
+
+    </select>
+
+</mapper>

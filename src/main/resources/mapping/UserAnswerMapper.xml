@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.codefarme.imchat.mapper.UserAnswerMapper">
+    <resultMap id="BaseResultMap" type="com.codefarme.imchat.pojo.UserAnswer">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="sys_id" property="sysId" jdbcType="INTEGER"/>
+        <result column="account" property="account" jdbcType="VARCHAR"/>
+        <result column="question" property="question" jdbcType="VARCHAR"/>
+        <result column="answer" property="answer" jdbcType="VARCHAR"/>
+        <result column="addtime" property="addtime" jdbcType="VARCHAR"/>
+        <result column="sort" property="sort" jdbcType="INTEGER"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, sys_id, account, question, answer, addtime, sort
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from user_answer
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from user_answer
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.codefarme.imchat.pojo.UserAnswer">
+    insert into user_answer (id, sys_id, account, 
+      question, answer, addtime, 
+      sort)
+    values (#{id,jdbcType=INTEGER}, #{sysId,jdbcType=INTEGER}, #{account,jdbcType=VARCHAR}, 
+      #{question,jdbcType=VARCHAR}, #{answer,jdbcType=VARCHAR}, #{addtime,jdbcType=VARCHAR}, 
+      #{sort,jdbcType=INTEGER})
+  </insert>
+    <insert id="insertSelective" parameterType="com.codefarme.imchat.pojo.UserAnswer">
+        insert into user_answer
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="sysId != null">
+                sys_id,
+            </if>
+            <if test="account != null">
+                account,
+            </if>
+            <if test="question != null">
+                question,
+            </if>
+            <if test="answer != null">
+                answer,
+            </if>
+            <if test="addtime != null">
+                addtime,
+            </if>
+            <if test="sort != null">
+                sort,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="sysId != null">
+                #{sysId,jdbcType=INTEGER},
+            </if>
+            <if test="account != null">
+                #{account,jdbcType=VARCHAR},
+            </if>
+            <if test="question != null">
+                #{question,jdbcType=VARCHAR},
+            </if>
+            <if test="answer != null">
+                #{answer,jdbcType=VARCHAR},
+            </if>
+            <if test="addtime != null">
+                #{addtime,jdbcType=VARCHAR},
+            </if>
+            <if test="sort != null">
+                #{sort,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.codefarme.imchat.pojo.UserAnswer">
+        update user_answer
+        <set>
+            <if test="sysId != null">
+                sys_id = #{sysId,jdbcType=INTEGER},
+            </if>
+            <if test="account != null">
+                account = #{account,jdbcType=VARCHAR},
+            </if>
+            <if test="question != null">
+                question = #{question,jdbcType=VARCHAR},
+            </if>
+            <if test="answer != null">
+                answer = #{answer,jdbcType=VARCHAR},
+            </if>
+            <if test="addtime != null">
+                addtime = #{addtime,jdbcType=VARCHAR},
+            </if>
+            <if test="sort != null">
+                sort = #{sort,jdbcType=INTEGER},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.codefarme.imchat.pojo.UserAnswer">
+    update user_answer
+    set sys_id = #{sysId,jdbcType=INTEGER},
+      account = #{account,jdbcType=VARCHAR},
+      question = #{question,jdbcType=VARCHAR},
+      answer = #{answer,jdbcType=VARCHAR},
+      addtime = #{addtime,jdbcType=VARCHAR},
+      sort = #{sort,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+    <!--========================================================================================-->
+
+    <!--获取指定用户的问答按升序排列 防止问题重复根据系统配置字段去重-->
+    <select id="selectByAccount" parameterType="java.lang.String" resultType="com.codefarme.imchat.pojo.UserAnswer">
+        SELECT
+          *
+        FROM
+          user_answer
+        WHERE
+          account = #{account,jdbcType=VARCHAR}
+
+        ORDER BY
+          sort asc
+
+  </select>
+
+    <select id="selectByAccountAndSysId"  resultType="com.codefarme.imchat.pojo.UserAnswer">
+        SELECT
+         *
+        FROM
+          user_answer
+        WHERE
+          account = #{account,jdbcType=VARCHAR}
+
+        AND
+          sys_id = #{sysId,jdbcType=INTEGER}
+
+    </select>
+
+
+
+
+</mapper>

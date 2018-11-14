@@ -1,0 +1,644 @@
+2018/10/21-10:14 [main] INFO  ZxfApplication- Starting ZxfApplication on V1QIKPAKACARJCC with PID 11336 (E:\zxf\zxf_new\target\classes started by Administrator in E:\zxf\zxf_new)
+2018/10/21-10:14 [main] INFO  ZxfApplication- No active profile set, falling back to default profiles: default
+2018/10/21-10:14 [main] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@130161f7: startup date [Sun Oct 21 10:14:36 CST 2018]; root of context hierarchy
+2018/10/21-10:14 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2018/10/21-10:14 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$601d7c6b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018/10/21-10:14 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2018/10/21-10:14 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2018/10/21-10:14 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet Engine: Apache Tomcat/8.5.34
+2018/10/21-10:14 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener- Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+2018/10/21-10:14 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener- APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2018/10/21-10:14 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener- APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2018/10/21-10:14 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener- OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+2018/10/21-10:14 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2018/10/21-10:14 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 3299 ms
+2018/10/21-10:14 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean- Servlet dispatcherServlet mapped to [/]
+2018/10/21-10:14 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean- Servlet statViewServlet mapped to [/druid/*]
+2018/10/21-10:14 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean- Mapping filter: 'characterEncodingFilter' to: [/*]
+2018/10/21-10:14 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018/10/21-10:14 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018/10/21-10:14 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean- Mapping filter: 'requestContextFilter' to: [/*]
+2018/10/21-10:14 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean- Mapping filter: 'webStatFilter' to urls: [/*]
+2018/10/21-10:14 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure- Init DruidDataSource
+2018/10/21-10:14 [main] INFO  com.alibaba.druid.pool.DruidDataSource- {dataSource-1} inited
+2018/10/21-10:14 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler- Initializing ExecutorService
+2018/10/21-10:14 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler- Initializing ExecutorService 'taskScheduler'
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter- Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@130161f7: startup date [Sun Oct 21 10:14:36 CST 2018]; root of context hierarchy
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/dynamic/publish_dynamic],methods=[POST]}" onto public Result DynamicController.publish(javax.servlet.http.HttpServletRequest)
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/dynamic/reply],methods=[POST]}" onto public Result DynamicController.reply(javax.servlet.http.HttpServletRequest)
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/dynamic/detail],methods=[POST]}" onto public Result<CommentReplyData> DynamicController.lookplazaDetail(javax.servlet.http.HttpServletRequest)
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/dynamic/comment],methods=[POST]}" onto public Result DynamicController.dynamiccomment(javax.servlet.http.HttpServletRequest)
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/dynamic/lookOneDynamic.action]}" onto public Result<java.util.Map<java.lang.String, java.lang.Object>> DynamicController.lookOneDynamic(javax.servlet.http.HttpServletRequest)
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/dynamic/look_square],methods=[POST]}" onto public Result<java.util.List<java.util.Map<java.lang.String, java.lang.Object>>> DynamicController.lookplazadynamic(javax.servlet.http.HttpServletRequest)
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/user/test],methods=[GET]}" onto public Result UserController.test()
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/user/code],methods=[POST]}" onto public Result<java.util.Map<java.lang.String, java.lang.Object>> UserController.code(javax.servlet.http.HttpServletRequest)
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/user/generate_sig],methods=[POST]}" onto public Result<java.util.Map<java.lang.String, java.lang.Object>> UserController.generateSigByAccount(javax.servlet.http.HttpServletRequest)
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/user/status],methods=[POST]}" onto public Result<java.util.Map<java.lang.String, java.lang.Object>> UserController.checkStatus(javax.servlet.http.HttpServletRequest)
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/user/update_sign],methods=[POST]}" onto public Result UserController.updateSig(javax.servlet.http.HttpServletRequest)
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/user/login],methods=[POST]}" onto public Result<java.util.Map<java.lang.String, java.lang.Object>> UserController.login(javax.servlet.http.HttpServletRequest)
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/user/qq_regist],methods=[POST]}" onto public Result<java.util.Map<java.lang.String, java.lang.Object>> UserController.qqaccountregist(javax.servlet.http.HttpServletRequest)
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/user/delete_album],methods=[POST]}" onto public Result UserController.deletePhotoAlbum(javax.servlet.http.HttpServletRequest)
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/user/edit_head],methods=[POST]}" onto public Result<java.lang.String> UserController.editHead(javax.servlet.http.HttpServletRequest)
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/user/upload_album],methods=[POST]}" onto public Result<java.util.List<UserAlbum>> UserController.photoAlbum(javax.servlet.http.HttpServletRequest)
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/user/vip_info],methods=[POST]}" onto public Result<java.util.Map<java.lang.String, java.lang.Object>> UserController.getVipInfo(javax.servlet.http.HttpServletRequest)
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/user/get_album],methods=[POST]}" onto public Result<java.util.List<UserAlbum>> UserController.getPhotoAlbum(javax.servlet.http.HttpServletRequest)
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/user/view_profile],methods=[POST]}" onto public Result<UserInfo> UserController.viewprofile(javax.servlet.http.HttpServletRequest)
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/user/edit_profile],methods=[POST]}" onto public Result UserController.initProfile(javax.servlet.http.HttpServletRequest)
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018/10/21-10:14 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018/10/21-10:14 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter- Registering beans for JMX exposure on startup
+2018/10/21-10:14 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter- Bean with name 'statFilter' has been autodetected for JMX exposure
+2018/10/21-10:14 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter- Bean with name 'dataSource' has been autodetected for JMX exposure
+2018/10/21-10:14 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter- Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018/10/21-10:14 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter- Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018/10/21-10:14 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler- Initializing ExecutorService
+2018/10/21-10:14 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2018/10/21-10:14 [main] INFO  ZxfApplication- Started ZxfApplication in 10.325 seconds (JVM running for 11.183)
+2018/10/21-10:14 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018/10/21-10:14 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- FrameworkServlet 'dispatcherServlet': initialization started
+2018/10/21-10:14 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2018/10/21-10:14 [http-nio-8080-exec-1] DEBUG UserAlbumMapper.selectByAccount- ==>  Preparing: select id, account, picUrl, status from user_album where account = ? AND status = 1
+2018/10/21-10:14 [http-nio-8080-exec-2] DEBUG UserVipMapper.getVipByAccount- ==>  Preparing: SELECT * FROM user_vip WHERE account=?
+2018/10/21-10:14 [http-nio-8080-exec-1] DEBUG UserAlbumMapper.selectByAccount- ==> Parameters: 15201137503(String)
+2018/10/21-10:14 [http-nio-8080-exec-2] DEBUG UserVipMapper.getVipByAccount- ==> Parameters: 15201137503(String)
+2018/10/21-10:14 [http-nio-8080-exec-1] DEBUG UserAlbumMapper.selectByAccount- <==      Total: 2
+2018/10/21-10:14 [http-nio-8080-exec-2] DEBUG UserVipMapper.getVipByAccount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicMapper.selectTotalCount_COUNT- ==>  Preparing: SELECT count(0) FROM dynamic WHERE status = 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicMapper.selectTotalCount_COUNT- ==> Parameters:
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicMapper.selectTotalCount_COUNT- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicMapper.selectTotalCount- ==>  Preparing: SELECT * FROM dynamic where status = 0 ORDER BY add_time desc LIMIT ?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicMapper.selectTotalCount- ==> Parameters: 10(Integer)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicMapper.selectTotalCount- <==      Total: 10
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 15201137503(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 174(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 174(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 174(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 174(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 174(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 18759518155(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 172(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 172(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 172(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 172(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 172(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 123456785(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 171(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 171(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 171(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 171(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 171(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 123456784(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 170(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 170(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 170(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 170(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 170(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 123456782(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 168(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 168(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 168(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 168(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 168(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 123456783(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 169(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 169(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 169(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 169(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 169(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 123456780(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 166(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 166(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 166(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 166(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 166(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 123456781(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 167(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 167(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 167(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 167(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 167(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 15201137503(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 165(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 165(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 165(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 165(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 165(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 15201137503(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 164(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 164(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 164(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 164(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 164(String)
+2018/10/21-10:15 [http-nio-8080-exec-3] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-5] DEBUG DynamicMapper.selectTotalCount_COUNT- ==>  Preparing: SELECT count(0) FROM dynamic WHERE status = 0
+2018/10/21-10:16 [http-nio-8080-exec-5] DEBUG DynamicMapper.selectTotalCount_COUNT- ==> Parameters:
+2018/10/21-10:16 [http-nio-8080-exec-5] DEBUG DynamicMapper.selectTotalCount_COUNT- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-5] DEBUG DynamicMapper.selectTotalCount- ==>  Preparing: SELECT * FROM dynamic where status = 0 ORDER BY add_time desc LIMIT ?, ?
+2018/10/21-10:16 [http-nio-8080-exec-5] DEBUG DynamicMapper.selectTotalCount- ==> Parameters: 10(Integer), 10(Integer)
+2018/10/21-10:16 [http-nio-8080-exec-5] DEBUG DynamicMapper.selectTotalCount- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicMapper.selectTotalCount_COUNT- ==>  Preparing: SELECT count(0) FROM dynamic WHERE status = 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicMapper.selectTotalCount_COUNT- ==> Parameters:
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicMapper.selectTotalCount_COUNT- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicMapper.selectTotalCount- ==>  Preparing: SELECT * FROM dynamic where status = 0 ORDER BY add_time desc LIMIT ?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicMapper.selectTotalCount- ==> Parameters: 10(Integer)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicMapper.selectTotalCount- <==      Total: 10
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 15201137503(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 174(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 174(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 174(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 174(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 174(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 18759518155(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 172(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 172(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 172(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 172(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 172(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 123456785(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 171(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 171(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 171(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 171(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 171(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 123456784(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 170(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 170(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 170(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 170(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 170(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 123456782(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 168(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 168(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 168(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 168(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 168(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 123456783(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 169(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 169(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 169(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 169(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 169(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 123456780(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 166(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 166(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 166(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 166(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 166(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 123456781(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 167(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 167(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 167(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 167(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 167(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 15201137503(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 165(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 165(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 165(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 165(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 165(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 15201137503(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 164(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 164(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 164(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 164(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 164(String)
+2018/10/21-10:16 [http-nio-8080-exec-7] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-8] DEBUG DynamicMapper.selectTotalCount_COUNT- ==>  Preparing: SELECT count(0) FROM dynamic WHERE status = 0
+2018/10/21-10:16 [http-nio-8080-exec-8] DEBUG DynamicMapper.selectTotalCount_COUNT- ==> Parameters:
+2018/10/21-10:16 [http-nio-8080-exec-8] DEBUG DynamicMapper.selectTotalCount_COUNT- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-8] DEBUG DynamicMapper.selectTotalCount- ==>  Preparing: SELECT * FROM dynamic where status = 0 ORDER BY add_time desc LIMIT ?, ?
+2018/10/21-10:16 [http-nio-8080-exec-8] DEBUG DynamicMapper.selectTotalCount- ==> Parameters: 10(Integer), 10(Integer)
+2018/10/21-10:16 [http-nio-8080-exec-8] DEBUG DynamicMapper.selectTotalCount- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicMapper.selectTotalCount_COUNT- ==>  Preparing: SELECT count(0) FROM dynamic WHERE status = 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicMapper.selectTotalCount_COUNT- ==> Parameters:
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicMapper.selectTotalCount_COUNT- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicMapper.selectTotalCount- ==>  Preparing: SELECT * FROM dynamic where status = 0 ORDER BY add_time desc LIMIT ?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicMapper.selectTotalCount- ==> Parameters: 10(Integer)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicMapper.selectTotalCount- <==      Total: 10
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 15201137503(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 174(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 174(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 174(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 174(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 174(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 18759518155(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 172(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 172(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 172(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 172(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 172(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 123456785(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 171(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 171(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 171(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 171(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 171(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 123456784(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 170(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 170(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 170(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 170(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 170(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 123456782(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 168(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 168(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 168(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 168(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 168(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 123456783(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 169(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 169(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 169(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 169(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 169(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 123456780(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 166(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 166(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 166(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 166(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 166(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 123456781(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 167(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 167(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 167(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 167(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 167(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 15201137503(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 165(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 165(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 165(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 165(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 165(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- ==>  Preparing: SELECT * FROM user_info WHERE account=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- ==> Parameters: 15201137503(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG UserInfoMapper.getUserByAccount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- ==>  Preparing: SELECT * FROM dynamic_img WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- ==> Parameters: 164(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicImgMapper.getDynamicImgBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==>  Preparing: SELECT * FROM dynamic_sound WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- ==> Parameters: 164(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicSoundMapper.getDynamicSoundBycid- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==>  Preparing: SELECT COUNT(id) FROM dynamic_praise WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- ==> Parameters: 164(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLikeCount- <==      Total: 1
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- ==>  Preparing: SELECT * FROM dynamic_praise WHERE cid=? ORDER BY add_time desc
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- ==> Parameters: 164(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicPraiseMapper.getDynamicLike- <==      Total: 0
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==>  Preparing: SELECT count(*) FROM dynamic_comment WHERE cid=?
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- ==> Parameters: 164(String)
+2018/10/21-10:16 [http-nio-8080-exec-10] DEBUG DynamicCommentMapper.getDynamicCommentCount- <==      Total: 1
+2018/10/21-10:17 [http-nio-8080-exec-9] DEBUG DynamicMapper.selectTotalCount_COUNT- ==>  Preparing: SELECT count(0) FROM dynamic WHERE status = 0
+2018/10/21-10:17 [http-nio-8080-exec-9] DEBUG DynamicMapper.selectTotalCount_COUNT- ==> Parameters:
+2018/10/21-10:17 [http-nio-8080-exec-9] DEBUG DynamicMapper.selectTotalCount_COUNT- <==      Total: 1
+2018/10/21-10:17 [http-nio-8080-exec-9] DEBUG DynamicMapper.selectTotalCount- ==>  Preparing: SELECT * FROM dynamic where status = 0 ORDER BY add_time desc LIMIT ?, ?
+2018/10/21-10:17 [http-nio-8080-exec-9] DEBUG DynamicMapper.selectTotalCount- ==> Parameters: 10(Integer), 10(Integer)
+2018/10/21-10:17 [http-nio-8080-exec-9] DEBUG DynamicMapper.selectTotalCount- <==      Total: 0

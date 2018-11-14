@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.codefarme.imchat.mapper.UserGiveGiftMapper" >
+  <resultMap id="BaseResultMap" type="com.codefarme.imchat.pojo.UserGiveGift" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="gid" property="gid" jdbcType="INTEGER" />
+    <result column="account" property="account" jdbcType="VARCHAR" />
+    <result column="give_account" property="giveAccount" jdbcType="VARCHAR" />
+    <result column="num" property="num" jdbcType="INTEGER" />
+    <result column="add_time" property="addTime" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, gid, account, give_account, num, add_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from user_give_gift
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from user_give_gift
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.codefarme.imchat.pojo.UserGiveGift" >
+    insert into user_give_gift (id, gid, account, 
+      give_account, num, add_time
+      )
+    values (#{id,jdbcType=INTEGER}, #{gid,jdbcType=INTEGER}, #{account,jdbcType=VARCHAR}, 
+      #{giveAccount,jdbcType=VARCHAR}, #{num,jdbcType=INTEGER}, #{addTime,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.codefarme.imchat.pojo.UserGiveGift" >
+    insert into user_give_gift
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="gid != null" >
+        gid,
+      </if>
+      <if test="account != null" >
+        account,
+      </if>
+      <if test="giveAccount != null" >
+        give_account,
+      </if>
+      <if test="num != null" >
+        num,
+      </if>
+      <if test="addTime != null" >
+        add_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="gid != null" >
+        #{gid,jdbcType=INTEGER},
+      </if>
+      <if test="account != null" >
+        #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="giveAccount != null" >
+        #{giveAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="num != null" >
+        #{num,jdbcType=INTEGER},
+      </if>
+      <if test="addTime != null" >
+        #{addTime,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.codefarme.imchat.pojo.UserGiveGift" >
+    update user_give_gift
+    <set >
+      <if test="gid != null" >
+        gid = #{gid,jdbcType=INTEGER},
+      </if>
+      <if test="account != null" >
+        account = #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="giveAccount != null" >
+        give_account = #{giveAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="num != null" >
+        num = #{num,jdbcType=INTEGER},
+      </if>
+      <if test="addTime != null" >
+        add_time = #{addTime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.codefarme.imchat.pojo.UserGiveGift" >
+    update user_give_gift
+    set gid = #{gid,jdbcType=INTEGER},
+      account = #{account,jdbcType=VARCHAR},
+      give_account = #{giveAccount,jdbcType=VARCHAR},
+      num = #{num,jdbcType=INTEGER},
+      add_time = #{addTime,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+  <!--================================================================-->
+  <!--送出的礼物-->
+  <select id="selectAllGiveGift" parameterType="java.lang.String" resultType="com.codefarme.imchat.pojo.UserGiveGift"  >
+    select
+      *
+    from
+      user_give_gift
+    where
+      account = #{account,jdbcType=VARCHAR}
+
+      order by
+      add_time desc
+
+  </select>
+  <!--收到的礼物-->
+  <select id="selectAllReceiveGift" parameterType="java.lang.String" resultType="com.codefarme.imchat.pojo.UserGiveGift"  >
+    select
+      *
+    from
+      user_give_gift
+    where
+      give_account = #{account,jdbcType=VARCHAR}
+
+      order by
+      add_time desc
+
+  </select>
+</mapper>

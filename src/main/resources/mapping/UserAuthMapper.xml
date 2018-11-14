@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.codefarme.imchat.mapper.UserAuthMapper">
+    <resultMap id="BaseResultMap" type="com.codefarme.imchat.pojo.UserAuth">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="account" property="account" jdbcType="VARCHAR"/>
+        <result column="auth_avatar" property="authAvatar" jdbcType="VARCHAR"/>
+        <result column="auth_video" property="authVideo" jdbcType="VARCHAR"/>
+        <result column="auth_video_thumb" property="authVideoThumb" jdbcType="VARCHAR"/>
+        <result column="add_time" property="addTime" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="INTEGER"/>
+        <result column="failure_reason" property="failureReason" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, account, auth_avatar, auth_video, auth_video_thumb, add_time, status, failure_reason
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from user_auth
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from user_auth
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.codefarme.imchat.pojo.UserAuth">
+    insert into user_auth (id, account, auth_avatar, 
+      auth_video, auth_video_thumb, add_time, 
+      status, failure_reason)
+    values (#{id,jdbcType=INTEGER}, #{account,jdbcType=VARCHAR}, #{authAvatar,jdbcType=VARCHAR}, 
+      #{authVideo,jdbcType=VARCHAR}, #{authVideoThumb,jdbcType=VARCHAR}, #{addTime,jdbcType=VARCHAR}, 
+      #{status,jdbcType=INTEGER}, #{failureReason,jdbcType=VARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.codefarme.imchat.pojo.UserAuth">
+        insert into user_auth
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="account != null">
+                account,
+            </if>
+            <if test="authAvatar != null">
+                auth_avatar,
+            </if>
+            <if test="authVideo != null">
+                auth_video,
+            </if>
+            <if test="authVideoThumb != null">
+                auth_video_thumb,
+            </if>
+            <if test="addTime != null">
+                add_time,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="failureReason != null">
+                failure_reason,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="account != null">
+                #{account,jdbcType=VARCHAR},
+            </if>
+            <if test="authAvatar != null">
+                #{authAvatar,jdbcType=VARCHAR},
+            </if>
+            <if test="authVideo != null">
+                #{authVideo,jdbcType=VARCHAR},
+            </if>
+            <if test="authVideoThumb != null">
+                #{authVideoThumb,jdbcType=VARCHAR},
+            </if>
+            <if test="addTime != null">
+                #{addTime,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=INTEGER},
+            </if>
+            <if test="failureReason != null">
+                #{failureReason,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.codefarme.imchat.pojo.UserAuth">
+        update user_auth
+        <set>
+            <if test="account != null">
+                account = #{account,jdbcType=VARCHAR},
+            </if>
+            <if test="authAvatar != null">
+                auth_avatar = #{authAvatar,jdbcType=VARCHAR},
+            </if>
+            <if test="authVideo != null">
+                auth_video = #{authVideo,jdbcType=VARCHAR},
+            </if>
+            <if test="authVideoThumb != null">
+                auth_video_thumb = #{authVideoThumb,jdbcType=VARCHAR},
+            </if>
+            <if test="addTime != null">
+                add_time = #{addTime,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=INTEGER},
+            </if>
+            <if test="failureReason != null">
+                failure_reason = #{failureReason,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.codefarme.imchat.pojo.UserAuth">
+    update user_auth
+    set account = #{account,jdbcType=VARCHAR},
+      auth_avatar = #{authAvatar,jdbcType=VARCHAR},
+      auth_video = #{authVideo,jdbcType=VARCHAR},
+      auth_video_thumb = #{authVideoThumb,jdbcType=VARCHAR},
+      add_time = #{addTime,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      failure_reason = #{failureReason,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+    <!--======================================================================-->
+    <!--查看所有的认证用户-->
+    <select id="selectAuthUser" resultType="com.codefarme.imchat.response.UserAuthResponse">
+        SELECT
+          user_auth.*,
+          user_info.username,user_info.account,user_info.avatar,user_info.sign,
+          user_info.sex,user_info.height,user_info.weight,user_info.province,
+          user_info.city,user_info.ethnicity,user_info.login_time
+        FROM
+          user_auth,user_info
+        WHERE
+            user_auth.status =  1
+
+          AND
+            user_auth.account= user_info.account
+          AND
+            user_info.status = 1
+
+        ORDER BY
+            user_info.login_time desc
+
+    </select>
+
+    <!--按照性别查看 联合UserInfo表-->
+    <select id="selectAuthUserSex" parameterType="java.lang.String" resultType="com.codefarme.imchat.response.UserAuthResponse">
+        SELECT
+          user_auth.*,
+          user_info.username,user_info.account,user_info.avatar,user_info.sign,
+          user_info.sex,user_info.height,user_info.weight,user_info.province,
+          user_info.city,user_info.ethnicity,user_info.login_time
+        FROM
+          user_auth,user_info
+        WHERE
+            user_auth.status =1
+          AND
+
+            user_auth.account= user_info.account
+          AND
+            user_info.sex=#{sex}
+
+          AND
+            user_info.status = 1
+
+
+        ORDER BY
+          user_info.login_time desc
+
+    </select>
+
+    <!--获取当前用户的认证信息-->
+    <select id="selectByAccount" parameterType="java.lang.String" resultType="com.codefarme.imchat.pojo.UserAuth">
+        SELECT
+          *
+        FROM
+          user_auth
+        WHERE
+          account = #{account,jdbcType=VARCHAR}
+    </select>
+</mapper>

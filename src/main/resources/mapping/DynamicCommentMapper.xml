@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.codefarme.imchat.mapper.DynamicCommentMapper" >
+  <resultMap id="BaseResultMap" type="com.codefarme.imchat.pojo.DynamicComment" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="cid" property="cid" jdbcType="INTEGER" />
+    <result column="account" property="account" jdbcType="VARCHAR" />
+    <result column="dynamic_account" property="dynamicAccount" jdbcType="VARCHAR" />
+    <result column="comment_type" property="commentType" jdbcType="VARCHAR" />
+    <result column="comment_content" property="commentContent" jdbcType="VARCHAR" />
+    <result column="add_time" property="addTime" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, cid, account, dynamic_account, comment_type, comment_content, add_time, status
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from dynamic_comment
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from dynamic_comment
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.codefarme.imchat.pojo.DynamicComment" >
+    insert into dynamic_comment (id, cid, account, 
+      dynamic_account, comment_type, comment_content, 
+      add_time, status)
+    values (#{id,jdbcType=INTEGER}, #{cid,jdbcType=INTEGER}, #{account,jdbcType=VARCHAR}, 
+      #{dynamicAccount,jdbcType=VARCHAR}, #{commentType,jdbcType=VARCHAR}, #{commentContent,jdbcType=VARCHAR}, 
+      #{addTime,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.codefarme.imchat.pojo.DynamicComment" >
+    insert into dynamic_comment
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="cid != null" >
+        cid,
+      </if>
+      <if test="account != null" >
+        account,
+      </if>
+      <if test="dynamicAccount != null" >
+        dynamic_account,
+      </if>
+      <if test="commentType != null" >
+        comment_type,
+      </if>
+      <if test="commentContent != null" >
+        comment_content,
+      </if>
+      <if test="addTime != null" >
+        add_time,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="cid != null" >
+        #{cid,jdbcType=INTEGER},
+      </if>
+      <if test="account != null" >
+        #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="dynamicAccount != null" >
+        #{dynamicAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="commentType != null" >
+        #{commentType,jdbcType=VARCHAR},
+      </if>
+      <if test="commentContent != null" >
+        #{commentContent,jdbcType=VARCHAR},
+      </if>
+      <if test="addTime != null" >
+        #{addTime,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.codefarme.imchat.pojo.DynamicComment" >
+    update dynamic_comment
+    <set >
+      <if test="cid != null" >
+        cid = #{cid,jdbcType=INTEGER},
+      </if>
+      <if test="account != null" >
+        account = #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="dynamicAccount != null" >
+        dynamic_account = #{dynamicAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="commentType != null" >
+        comment_type = #{commentType,jdbcType=VARCHAR},
+      </if>
+      <if test="commentContent != null" >
+        comment_content = #{commentContent,jdbcType=VARCHAR},
+      </if>
+      <if test="addTime != null" >
+        add_time = #{addTime,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.codefarme.imchat.pojo.DynamicComment" >
+    update dynamic_comment
+    set cid = #{cid,jdbcType=INTEGER},
+      account = #{account,jdbcType=VARCHAR},
+      dynamic_account = #{dynamicAccount,jdbcType=VARCHAR},
+      comment_type = #{commentType,jdbcType=VARCHAR},
+      comment_content = #{commentContent,jdbcType=VARCHAR},
+      add_time = #{addTime,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <!--===========================================================================================-->
+
+  <!--获取数据库的记录总数-->
+  <select id="getDynamicCommentCount" resultType="java.lang.Integer">
+		SELECT
+		count(*)
+		FROM
+			dynamic_comment
+		WHERE
+			cid=#{cid}
+
+    </select>
+
+  <select id="getDynamicCommentByCid" resultType="com.codefarme.imchat.pojo.DynamicComment">
+		SELECT
+			*
+		FROM
+			dynamic_comment
+		WHERE
+			cid=#{cid}
+
+		ORDER BY
+		add_time desc
+	</select>
+
+  <select id="selectByDynaicAccount" resultType="com.codefarme.imchat.pojo.DynamicComment">
+		SELECT
+			*
+		FROM
+			dynamic_comment
+		WHERE
+			dynamic_account = #{dynamicAccount,jdbcType=VARCHAR}
+
+		ORDER BY
+		add_time desc
+	</select>
+
+</mapper>

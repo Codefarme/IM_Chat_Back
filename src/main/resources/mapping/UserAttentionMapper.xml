@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.codefarme.imchat.mapper.UserAttentionMapper">
+    <resultMap id="BaseResultMap" type="com.codefarme.imchat.pojo.UserAttention">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="account" property="account" jdbcType="VARCHAR"/>
+        <result column="attention_account" property="attentionAccount" jdbcType="VARCHAR"/>
+        <result column="attention_time" property="attentionTime" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, account, attention_account, attention_time
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from user_attention
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from user_attention
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.codefarme.imchat.pojo.UserAttention">
+    insert into user_attention (id, account, attention_account, 
+      attention_time)
+    values (#{id,jdbcType=INTEGER}, #{account,jdbcType=VARCHAR}, #{attentionAccount,jdbcType=VARCHAR}, 
+      #{attentionTime,jdbcType=VARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.codefarme.imchat.pojo.UserAttention">
+        insert into user_attention
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="account != null">
+                account,
+            </if>
+            <if test="attentionAccount != null">
+                attention_account,
+            </if>
+            <if test="attentionTime != null">
+                attention_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="account != null">
+                #{account,jdbcType=VARCHAR},
+            </if>
+            <if test="attentionAccount != null">
+                #{attentionAccount,jdbcType=VARCHAR},
+            </if>
+            <if test="attentionTime != null">
+                #{attentionTime,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.codefarme.imchat.pojo.UserAttention">
+        update user_attention
+        <set>
+            <if test="account != null">
+                account = #{account,jdbcType=VARCHAR},
+            </if>
+            <if test="attentionAccount != null">
+                attention_account = #{attentionAccount,jdbcType=VARCHAR},
+            </if>
+            <if test="attentionTime != null">
+                attention_time = #{attentionTime,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.codefarme.imchat.pojo.UserAttention">
+    update user_attention
+    set account = #{account,jdbcType=VARCHAR},
+      attention_account = #{attentionAccount,jdbcType=VARCHAR},
+      attention_time = #{attentionTime,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+    <!--=============================================================================-->
+    <select id="selectByAccount" resultType="com.codefarme.imchat.pojo.UserAttention" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from user_attention
+        where account = #{account,jdbcType=VARCHAR}
+
+        ORDER BY
+        attention_time desc
+    </select>
+
+    <select id="selectFansByAccount" resultType="com.codefarme.imchat.pojo.UserAttention" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from user_attention
+        where
+        attention_account = #{account,jdbcType=VARCHAR}
+
+        ORDER BY
+        attention_time desc
+    </select>
+    <select id="selectByAccountAndMyAccount" resultType="java.lang.Integer">
+        select
+          count(id)
+        from user_attention
+        where
+         account = #{account,jdbcType=VARCHAR} AND
+        attention_account = #{attentionAccount,jdbcType=VARCHAR}
+    </select>
+    <delete id="deleteByAccountAndMyAccount">
+        delete
+
+        from user_attention
+        where
+         account = #{account,jdbcType=VARCHAR} AND
+        attention_account = #{attentionAccount,jdbcType=VARCHAR}
+    </delete>
+</mapper>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.codefarme.imchat.mapper.BottlesMapper">
+    <resultMap id="BaseResultMap" type="com.codefarme.imchat.pojo.Bottles">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="account" property="account" jdbcType="VARCHAR"/>
+        <result column="bottletext" property="bottletext" jdbcType="VARCHAR"/>
+        <result column="addtime" property="addtime" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, account, bottletext, addtime, status
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from bottles
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from bottles
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.codefarme.imchat.pojo.Bottles">
+    insert into bottles (id, account, bottletext, 
+      addtime, status)
+    values (#{id,jdbcType=INTEGER}, #{account,jdbcType=VARCHAR}, #{bottletext,jdbcType=VARCHAR}, 
+      #{addtime,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.codefarme.imchat.pojo.Bottles">
+        insert into bottles
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="account != null">
+                account,
+            </if>
+            <if test="bottletext != null">
+                bottletext,
+            </if>
+            <if test="addtime != null">
+                addtime,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="account != null">
+                #{account,jdbcType=VARCHAR},
+            </if>
+            <if test="bottletext != null">
+                #{bottletext,jdbcType=VARCHAR},
+            </if>
+            <if test="addtime != null">
+                #{addtime,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.codefarme.imchat.pojo.Bottles">
+        update bottles
+        <set>
+            <if test="account != null">
+                account = #{account,jdbcType=VARCHAR},
+            </if>
+            <if test="bottletext != null">
+                bottletext = #{bottletext,jdbcType=VARCHAR},
+            </if>
+            <if test="addtime != null">
+                addtime = #{addtime,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.codefarme.imchat.pojo.Bottles">
+    update bottles
+    set account = #{account,jdbcType=VARCHAR},
+      bottletext = #{bottletext,jdbcType=VARCHAR},
+      addtime = #{addtime,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+    <select id="getMyBottles" resultType="java.lang.Integer">
+        SELECT id
+        FROM bottles
+        WHERE account = #{account}
+    </select>
+
+
+    <select id="getBottlesNum" resultType="java.lang.Integer">
+        SELECT
+        count(id)
+        FROM
+        bottles
+        WHERE
+        id not in
+        <foreach collection="list" item="item" index="index"
+                 open="(" separator="," close=")">#{item}
+        </foreach>
+    </select>
+
+    <select id="getBottlesNum0" resultType="java.lang.Integer">
+        SELECT count(id)
+        FROM bottles
+    </select>
+
+
+    <!-- 捞起一个瓶子-->
+    <select id="getOneBottle" resultType="com.codefarme.imchat.pojo.Bottles">
+        SELECT
+        *
+        FROM
+        bottles
+        WHERE
+        id not in
+        <foreach collection="list" item="item" index="index"
+                 open="(" separator="," close=")">#{item}
+        </foreach>
+
+        AND
+
+        status = '0'
+
+        LIMIT #{integer},1
+    </select>
+
+    <select id="getOneBottle0" resultType="com.codefarme.imchat.pojo.Bottles">
+        SELECT *
+        FROM bottles
+
+        WHERE
+          status = '0'
+
+        LIMIT #{integer},1
+    </select>
+
+    <!--回复瓶子把瓶子状态置为已被回复-->
+
+    <update id="deleteBottle" parameterType="java.lang.Integer">
+        update  bottles
+        set status = '1'
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+</mapper>
